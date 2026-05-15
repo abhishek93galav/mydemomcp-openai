@@ -1,14 +1,14 @@
 import os
 from mcp.server.fastmcp import FastMCP
 from openai import OpenAI
-
+#from fastapi import FastAPI
+#from fastapi.middleware.cors import CORSMiddleware
 # Initialize FastMCP with name and transport type
 
 # Using host and port to be more specific about connection
 mcp = FastMCP("SummarizationServer", host="0.0.0.0", port=8000)
 # Use your own key here
-os.environ['OPENAI_API_KEY'] = '<use your own key here>'
-
+os.environ['OPENAI_API_KEY'] = <api key goes here>
 # Initialize OpenAI client
 client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
 
